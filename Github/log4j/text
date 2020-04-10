@@ -1,0 +1,26 @@
+name=Propertiesconfig
+property.filename=logs
+appenders=console ,file
+
+appender.console.type=console
+appender.console.name=STDOUT
+appender.console.layout.type=patternLayout
+appender.console.layout.pattern=[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} 
+
+appender.file.type=File
+appender.file.name=LOGFILE
+appender.file.filename=${filename}/Mylogs.log
+appender.file.layout.type=patternLayout
+appender.file.layout.pattern=[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t]
+
+loggers=file
+logger.file.name=guru.springframewoek.blog.log42jproperties
+
+logger.filelevel=debug
+logger.file.appenderRefs=file
+logger.file.appenderRef.file.Ref=LOGLIFE
+
+rootlogger.filelevel=debug
+rootlogger.file.appenderRefs=file
+rootlogger.file.appenderRef.file.Ref=LOGLIFE
+
